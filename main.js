@@ -276,3 +276,54 @@ function User(firstName, lastName,avatar)
 }
 User.prototype.className='F8';
 console.log(user.className); 
+
+// #39- Doi tuong Date 
+var date= new Date();
+
+var year= date.getFullYear();
+var month=date.getMonth();
+var day=date.getDate();
+
+console.log(`${day}/${month}/${year}`)
+
+//#40- Toan tu IF-ELSE
+var date=1;
+
+if(date==1)
+{
+  console.log('so 1')
+}
+
+// #41- Tenary operator
+
+var course ={
+  name:'Javascript',
+  coin: 0
+}
+if(course.coin>0)
+{
+  console.log(`${course.coin} Coins`);
+}
+else
+{
+  console.log('Free');
+}
+//-> chuyen sang dung tenary operator
+var kqua=course.coin>0 ? `${course.coin} Coins`: 'Free'
+console.log(kqua);
+
+// #42- For loop
+
+var myArray=[
+  'Javascript',
+  'PHP',
+  'Java',
+  'Dart'
+];
+
+var arrayLength=myArray.length;
+
+for( var i=0;i<arrayLength;i++)
+{
+  console.log(myArray[i]);
+}
