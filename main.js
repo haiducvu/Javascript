@@ -258,3 +258,21 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
+
+
+// #38- Object prototype- Basic
+//  prototype là gì?
+//  được sử dụng khi nào?
+
+//Viet 1 function 
+function User(firstName, lastName,avatar)
+{
+  this.firstName=firstName;
+  this.lastName=lastName;
+  this.avatar=avatar;
+  this.getName=function(){
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+User.prototype.className='F8';
+console.log(user.className); 
