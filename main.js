@@ -282,7 +282,7 @@ var date= new Date();
 
 var year= date.getFullYear();
 var month=date.getMonth();
-var day=date.getDate();
+var day=date.getDate(); 
 
 console.log(`${day}/${month}/${year}`)
 
@@ -296,7 +296,7 @@ if(date==1)
 
 // #41- Tenary operator
 
-var course ={
+var course ={ 
   name:'Javascript',
   coin: 0
 }
@@ -327,3 +327,5 @@ for( var i=0;i<arrayLength;i++)
 {
   console.log(myArray[i]);
 }
+
+
