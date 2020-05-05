@@ -320,12 +320,39 @@ var myArray=[
   'Java',
   'Dart'
 ];
-
+ 
 var arrayLength=myArray.length;
 
 for( var i=0;i<arrayLength;i++)
 {
-  console.log(myArray[i]);
+   console.log(myArray[i]);
 }
+
+// #43 - For of
+  // 1 Array
+var languages=[
+  'Javascript',
+  'PHP',
+  'Java'
+];
+
+for(var value of languages){
+  console.log(value);
+}
+
+// vong for loop
+var languages='12345678';
+for(var value of languages){
+  console.log(value);
+}
+ // 1 OBJECT
+var myInfo={
+  name:'Hai Duc',
+  age:18
+}
+
+console.log(Object.values(myInfo));
+
+
 
 
