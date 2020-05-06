@@ -26,7 +26,6 @@
 //     age:18,
 //     address:"TPHCM",
 //     myFunction: function(){
-
 //     }
 // };
 
@@ -148,7 +147,7 @@
 
 
 
-                                                              // *bai 31 Array map() method
+                 // *bai 31 Array map() method
 // var courses=[
 //   {
 //     id:1,
@@ -221,24 +220,24 @@
 // console.log(myInfo['age']);
 
 
-function User(firstName, lastName,avatar){
+// function User(firstName, lastName,avatar){
 
-  this.firstName=firstName,
-  this.lastName=lastName,
-  this.avatar=avatar;
+//   this.firstName=firstName,
+//   this.lastName=lastName,
+//   this.avatar=avatar;
   
-  this.getName=function(){
-    return `${this.firstName} ${this.lastName}`
-  }
-}
+//   this.getName=function(){
+//     return `${this.firstName} ${this.lastName}`
+//   }
+// }
 
-var author=new User('Hai','Vu');
-var user=new User('Vu','Hai');
+// var author=new User('Hai','Vu');
+// var user=new User('Vu','Hai');
 
-console.log(author.getName());
-console.log(user);
+// console.log(author.getName());
+// console.log(user);
 
-const inputs = document.querySelectorAll(".input");
+   const inputs = document.querySelectorAll(".input");
 
 
 function addcl(){
@@ -265,93 +264,115 @@ inputs.forEach(input => {
 //  được sử dụng khi nào?
 
 //Viet 1 function 
-function User(firstName, lastName,avatar)
-{
-  this.firstName=firstName;
-  this.lastName=lastName;
-  this.avatar=avatar;
-  this.getName=function(){
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
-User.prototype.className='F8';
-console.log(user.className); 
+// function User(firstName, lastName,avatar)
+// {
+//   this.firstName=firstName;
+//   this.lastName=lastName;
+//   this.avatar=avatar;
+//   this.getName=function(){
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// }
+// User.prototype.className='F8';
+// console.log(user.className); 
 
-// #39- Doi tuong Date 
-var date= new Date();
+// // #39- Doi tuong Date 
+// var date= new Date();
 
-var year= date.getFullYear();
-var month=date.getMonth();
-var day=date.getDate(); 
+// var year= date.getFullYear();
+// var month=date.getMonth();
+// var day=date.getDate(); 
 
-console.log(`${day}/${month}/${year}`)
+// console.log(`${day}/${month}/${year}`)
 
-//#40- Toan tu IF-ELSE
-var date=1;
+// //#40- Toan tu IF-ELSE
+// var date=1;
 
-if(date==1)
-{
-  console.log('so 1')
-}
+// if(date==1)
+// {
+//   console.log('so 1')
+// }
 
 // #41- Tenary operator
 
-var course ={ 
-  name:'Javascript',
-  coin: 0
-}
-if(course.coin>0)
-{
-  console.log(`${course.coin} Coins`);
-}
-else
-{
-  console.log('Free');
-}
-//-> chuyen sang dung tenary operator
-var kqua=course.coin>0 ? `${course.coin} Coins`: 'Free'
-console.log(kqua);
+// var course ={ 
+//   name:'Javascript',
+//   coin: 0
+// }
+// if(course.coin>0)
+// {
+//   console.log(`${course.coin} Coins`);
+// }
+// else
+// {
+//   console.log('Free');
+// }
+// //-> chuyen sang dung tenary operator
+// var kqua=course.coin>0 ? `${course.coin} Coins`: 'Free'
+// console.log(kqua);
 
 // #42- For loop
 
-var myArray=[
-  'Javascript',
-  'PHP',
-  'Java',
-  'Dart'
-];
+// var myArray=[
+//   'Javascript',
+//   'PHP',
+//   'Java',
+//   'Dart'
+// ];
  
-var arrayLength=myArray.length;
+// var arrayLength=myArray.length;
 
-for( var i=0;i<arrayLength;i++)
-{
-   console.log(myArray[i]);
-}
+// for( var i=0;i<arrayLength;i++)
+// {
+//    console.log(myArray[i]);
+// }
 
 // #43 - For of
   // 1 Array
-var languages=[
-  'Javascript',
-  'PHP',
-  'Java'
-];
+// var languages=[
+//   'Javascript',
+//   'PHP',
+//   'Java'
+// ];
 
-for(var value of languages){
-  console.log(value);
-}
+// for(var value of languages){
+//   console.log(value);
+// }
 
-// vong for loop
-var languages='12345678';
-for(var value of languages){
-  console.log(value);
-}
- // 1 OBJECT
-var myInfo={
-  name:'Hai Duc',
-  age:18
-}
+// vong for loop 
+// var languages='12345678';
+// for(var value of languages){
+//   console.log(value);
+// }
+//  // 1 OBJECT
+// var myInfo={
+//   name:'Hai Duc',
+//   age:18
+// }
+// console.log(Object.values(myInfo));
 
-console.log(Object.values(myInfo));
+// vong for for/in loop
+  //1 object
+  var myInfo={
+    name: 'vu',
+    age:23,
+    address:'tphcm'
+  };
+  for(var key in myInfo)
+  {
+    console.log(myInfo[key]);
+  }
+   //1 array
+   var myInfo=[
+     'Javascript',
+     'Java',
+     'PHP'
+   ]
+   for(var key in myInfo){
+     console.log(key)
+   }
+
+
 
 
 
