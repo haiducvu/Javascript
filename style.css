@@ -17,6 +17,9 @@ attr(); */
 .box::after{
 	content:attr(data-titles);
 }
+ /* reset css */
+	/* giup the html tro ve giá trị mặc định ngay từ đầu, để theo các quy chuẩn css do mình tự tạo ra nên ta cần reset css */
+
 *{
 	padding: 0;
 	margin: 0;
