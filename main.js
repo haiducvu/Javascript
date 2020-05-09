@@ -373,6 +373,12 @@ inputs.forEach(input => {
    }
 
 
+  //  arrow function
+function sayhello(name){
+  console.log("Hello",name);
+}
+
+sayhello=name=>console.log("Hello",name);
 
 
 
