@@ -237,7 +237,7 @@
 // console.log(author.getName());
 // console.log(user);
 
-   const inputs = document.querySelectorAll(".input");
+const inputs = document.querySelectorAll(".input");
 
 
 function addcl(){
@@ -351,7 +351,7 @@ inputs.forEach(input => {
 // }
 // console.log(Object.values(myInfo));
 
-// vong for for/in loop
+  // # bai 44 vong for for/in loop
   //1 object
   var myInfo={
     name: 'vu',
@@ -371,7 +371,7 @@ inputs.forEach(input => {
    for(var key in myInfo){
      console.log(key)
    }
-
+   // # bai 45
 
   //  arrow function
 function sayhello(name){
