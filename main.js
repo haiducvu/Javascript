@@ -353,33 +353,88 @@ inputs.forEach(input => {
 
   // # bai 44 vong for for/in loop
   //1 object
-  var myInfo={
-    name: 'vu',
-    age:23,
-    address:'tphcm'
-  };
-  for(var key in myInfo)
-  {
-    console.log(myInfo[key]);
-  }
-   //1 array
-   var myInfo=[
-     'Javascript',
-     'Java',
-     'PHP'
-   ]
-   for(var key in myInfo){
-     console.log(key)
-   }
-   // # bai 45
+//   var myInfo={
+//     name: 'vu',
+//     age:23,
+//     address:'tphcm'
+//   };
+//   for(var key in myInfo)
+//   {
+//     console.log(myInfo[key]);
+//   }
+//    //1 array
+//    var myInfo=[
+//      'Javascript',
+//      'Java',
+//      'PHP'
+//    ]
+//    for(var key in myInfo){
+//      console.log(key)
+//    }
+//    // # bai 45
 
-  //  arrow function
-function sayhello(name){
-  console.log("Hello",name);
+//   //  arrow function
+// function sayhello(name){
+//   console.log("Hello",name);
+// }
+
+// sayhello=name=>console.log("Hello",name);
+// var languages=[
+//   'C/C++',
+//   'Javascript',
+//   'PHP'
+// ];
+// console.log(languages.push('Java'));
+// console.log(languages);
+
+// // ham test function
+// var myFunction=function(){
+//   alert('cc');
+// }
+// // Object types
+// var myObject={
+//   name:'hai',
+//   age:'23',
+//   myFunction:function(){
+
+//   }
+// };
+// // array
+// var myArray=[
+//   'javascript',
+//   'java',
+//   'c/c++'
+// ];
+// console.log(myArray);
+
+// // thực thi với hàm
+//  function showDialong(){ // hàm tự định nghĩa nó sẽ k thực thi nếu k gọi
+//    //code
+//    alert('cc');
+//  }
+// showDialong();  // lệnh gọi hàm
+
+function writeLog(mess){
+  console.log(mess);
 }
+writeLog('cc');
 
-sayhello=name=>console.log("Hello",name);
+function writeLog(mess){
+  var myString='';
+  for(var param of arguments){
+    myString+=`{param}- `
+  }
+  console.log(myString);
+}
+writeLog('Log1', 'Log2','Log3');
 
+// hàm callback?
+// làm function có hàm số truyền vào
+// khi gọi hàm khác
+// 1. là hàm 
+// 2. được truyền vào đối số
 
-
-
+function myFunction(parram){
+  console.log(parram);
+}
+myFunction('123');
