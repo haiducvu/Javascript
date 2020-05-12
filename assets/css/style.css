@@ -69,9 +69,13 @@ html{
 	transform:translateY(-50%);
 }
  /* làm cho chữ mờ đi */
- .header__navbar-item:hover, .header__navbar-link:hover{
+ .header__navbar-item:hover, .header__navbar-link:hover,.header__navbar-icon:hover{
 	 color:rgba(255,255,255,0.7);
 	 cursor: pointer;
+ }
+ .header__navbar-title--no-pointer{
+	 cursor:text;
+	 color:#fff;
  }
 
 
