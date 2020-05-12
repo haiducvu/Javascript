@@ -414,27 +414,52 @@ inputs.forEach(input => {
 //  }
 // showDialong();  // lệnh gọi hàm
 
-function writeLog(mess){
-  console.log(mess);
-}
-writeLog('cc');
+// function writeLog(mess){
+//   console.log(mess);
+// }
+// writeLog('cc');
 
-function writeLog(mess){
-  var myString='';
-  for(var param of arguments){
-    myString+=`{param}- `
-  }
-  console.log(myString);
-}
-writeLog('Log1', 'Log2','Log3');
+// function writeLog(mess){
+//   var myString='';
+//   for(var param of arguments){
+//     myString+=`{param}- `
+//   }
+//   console.log(myString);
+// }
+// writeLog('Log1', 'Log2','Log3');
 
-// hàm callback?
+// hàm callback?=? gọi 1 hàm trong 1 hàm
 // làm function có hàm số truyền vào
 // khi gọi hàm khác
 // 1. là hàm 
-// 2. được truyền vào đối số
+// 2. được truyền QUA đối số
 
-function myFunction(parram){
-  console.log(parram);
+// function myFunction(parram){
+//   param('truyền dữ liệu vào');
+// }
+// myFunction('123');
+
+// function myCallback(value){
+//   console.log('Value: ',value);
+// }
+// myFunction(myCallback);
+
+// Tham trị, tham chiếu trong js?
+// Các khái niệm: stored by value, stored by reference, pass by value, pass by reference
+// **tham trị=> lưu giá trị trực tiếp khi nhận được
+// let a=5;
+// let b=a;
+// a=10;
+// console.log(b);
+// // **tham biến=> lưu lại địa chỉ
+// const a={name:'hau'};
+// const b=a;
+// a.name='Po';
+// console.log(b.name);
+// truyền tham số dạng tham trị
+function thambien(number){
+  number =10;
 }
-myFunction('123');
+const a=5;
+thambien(a);
+console.log(a);
