@@ -457,9 +457,9 @@ inputs.forEach(input => {
 // a.name='Po';
 // console.log(b.name);
 // truyền tham số dạng tham trị
-function thambien(number){
-  number =10;
-}
-const a=5;
-thambien(a);
-console.log(a);
+// function thambien(number){
+//   number =10;
+// }
+// const a=5;
+// thambien(a);
+// console.log(a);
