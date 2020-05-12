@@ -30,7 +30,7 @@ html{
    flex-wrap:wrap;
 }
 
-
+ 						/* begin */
 .header{
 	height:120px;	
 	background-image:linear-gradient(0,#fe6433,#f53e2d);
@@ -42,6 +42,7 @@ html{
 .header__navbar-list{
 	list-style:none;
 	padding-left:0px;
+	margin-top:4px;
 }
 .header__navbar-item, .header__navbar-link{
 	display:inline-block;
@@ -67,6 +68,16 @@ html{
 	top:50%;
 	transform:translateY(-50%);
 }
+ /* làm cho chữ mờ đi */
+ .header__navbar-item:hover, .header__navbar-link:hover{
+	 color:rgba(255,255,255,0.7);
+	 cursor: pointer;
+ }
+
+
+
+
+
 /* CSS function */
 /* var();
 linearGradient();
