@@ -17,7 +17,7 @@ html{
 	box-sizing:border-box;
 }
 .grid{
-   width:1000px;
+    width:1000px; /*căn chỉnh khoảng cách đều giữa 2 bên */
    max-width: 100%;
    margin: 0 auto;
 
@@ -42,7 +42,8 @@ html{
  						/* begin  css*/
 .header{
 	height:120px;	
-	background-image:linear-gradient(0,#fe6433,#f53e2d);
+	/* background-image:linear-gradient(0,#fe6433,#f53e2d); */
+	background-image:linear-gradient(0,#13547a ,#80d0c7);
 }
 .header__navbar{
 	display:flex;
@@ -73,7 +74,7 @@ html{
 	display: block;
 	position: absolute;
 	height:12px;
-	border-left: 1px solid #fb9086;
+	border-left: 1px solid #13547a ;     /*fb9086*/
 	right: -9px;
 	top:50%;
 	transform:translateY(-50%);
@@ -117,6 +118,78 @@ html{
 .header__navbar-item--has-qr:hover .header__qr{
 	display:block;
 
+}
+ /* css notification */
+.header__notification{
+	position: absolute;
+	top:100%;
+	width:404px;
+	right:0px;
+	background-color: #fff;
+	border: 1px solid #D3D3D3 ;
+}
+.header__notification-header h3{
+	color:#999;
+	margin:0 0 0 12px;
+	font-weight:300px;
+	font-size: 12px;
+	line-height:40px;
+}
+.header__notification-header {
+	 height:40px;
+	 background-color: #fff;
+}
+.header__notification-list {
+	padding-left:0px;
+}
+.header__notification-link {
+	display:flex;
+	padding:12px;
+	text-decoration: none;
+	
+
+}
+.header__notfication-item{
+	display:flex;
+}.header__notfication-item:hover{
+	background-color: #a5e0d6;
+}
+.header__notification-item--viewed{
+	background-color: #d1e0de;
+}
+.header__notification-link{
+	display:flex;
+	padding: 12px;
+	width:100%;
+	text-decoration: none ;
+}
+.header__notification-img {
+	 width: 48px;
+	object-fit: contain;
+}
+.header__notification-info {
+	 margin-left: 12px;
+
+}
+.header__notification-name {
+	 display: block;
+	 font-size: 14px;
+	 color:#000;
+	 font-weight: 500;
+}
+.header__notification-descriotion {
+	 display: block;
+	font-size: 13px;
+	line-height:1.6rem;
+	color:#999;
+}
+.header__notification-footer{
+	text-align: center;
+	
+	}
+.header__notification-footer-btn{
+	text-decoration: none;
+	padding: 4px 16px;
 }
 /* CSS function */
 /* var();
