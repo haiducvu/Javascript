@@ -77,10 +77,33 @@ html{
 	 cursor:text;
 	 color:#fff;
  }
+  /* chỉnh sửa qr_code */
+.header__qr{
+	background-color: white;
+	width: 186px;
+	position: absolute;
+	left:0;
+	top:100%;
+	padding: 8px;
+	border-radius: 2px;
 
-
-
-
+}
+.header__qr-img{
+	width:100%;
+}
+.header__qr-apps{
+	display: flex;
+	justify-content: space-between;
+}
+.header__qr-download-img{
+	height:17px;
+}
+.header__qr-link:first-child(1){
+	margin-left: 11px;
+}
+.header__qr-link:first-child(2){
+	margin-right: 11px;
+}
 
 /* CSS function */
 /* var();
