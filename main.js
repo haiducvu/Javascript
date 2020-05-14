@@ -10,7 +10,7 @@
 
 //  // Underfined type
 //  var age;
- 
+
 //  // Symbol type
 //  var id=Symbol();
 
@@ -56,7 +56,6 @@
 // console.log(languages)
 // //pop, shift
 
-
 // function in javascript
 // function showDialong(){
 //     alert('ham');
@@ -88,73 +87,71 @@
 // alert('Xin Chao');
 // let name =prompt("What is your name");
 
-// **Bai 28 
-  //khi dat ham trung ten
-  //khai bao bien trong ham
-  //dinh nghia ham trong ham
+// **Bai 28
+//khi dat ham trung ten
+//khai bao bien trong ham
+//dinh nghia ham trong ham
 
 // **Bai 29 Cac loai function
-    // 1.Declaration  function
-    // 2.Expression function
-    // 3. Arrow function
-    
-    //showMessage();
-  // function showMessage(){
-  //   console.log('chay function 1');
-  // }
-  
-  // var showMessage2=function(){
-  //   console.log('chay function 2');
-  // }
+// 1.Declaration  function
+// 2.Expression function
+// 3. Arrow function
 
-  // ==> Decraration cho phep goi truoc khi dinh nghia
-  // ==> Expression  khong cho phep goi truoc khi dinh nghia
+//showMessage();
+// function showMessage(){
+//   console.log('chay function 1');
+// }
 
-                                                                  //*Bai 30
-  //lam viec voi mang(P2)
-        /*
-        Array methods:
-          1forEach()
-          2every()
-          3some()
-          4find()
-          5filter()
-          6map()
-          7reduce()
-        */
-  // var courses=[
-  //   {
-  //     id:1,
-  //     name:'Javascripts',
-  //     coin:250
-  //   },  
-  //   {
-  //     id:2,
-  //     name:'Javascripts',
-  //     coin:300
-  //   }
-  // ];
+// var showMessage2=function(){
+//   console.log('chay function 2');
+// }
 
-  // //phuong thuc forEach
-  // // courses.forEach(function(courses,index){    //callback
-  // //   console.log(courses); 
-  // // }); 
-  // //phuong thuc every
-  // var isFree = courses.every(function(courses,index){
-  //   return courses.name === 'Javascripts';
-  // })
-  // console.log(isFree);
+// ==> Decraration cho phep goi truoc khi dinh nghia
+// ==> Expression  khong cho phep goi truoc khi dinh nghia
 
-
-
-                 // *bai 31 Array map() method
+//*Bai 30
+//lam viec voi mang(P2)
+/*
+Array methods:
+  1forEach()
+  2every()
+  3some()
+  4find()
+  5filter()
+  6map()
+  7reduce()
+*/
 // var courses=[
 //   {
 //     id:1,
 //     name:'Javascripts',
 //     coin:250
-    
-//   },  
+//   },
+//   {
+//     id:2,
+//     name:'Javascripts',
+//     coin:300
+//   }
+// ];
+
+// //phuong thuc forEach
+// // courses.forEach(function(courses,index){    //callback
+// //   console.log(courses);
+// // });
+// //phuong thuc every
+// var isFree = courses.every(function(courses,index){
+//   return courses.name === 'Javascripts';
+// })
+// console.log(isFree);
+
+// *bai 31 Array map() method
+// var courses=[
+//   {
+//     id:1,
+//     name:'Javascripts',
+//     coin:250
+
+//   },
 //   {
 //     id:2,
 //     name:'html, css',
@@ -173,15 +170,14 @@
 // var newCourses =courses.map(coursesHandler);
 // console.log(newCourses);
 
-
-                                              //* Bai 32 Array reduce() method
+//* Bai 32 Array reduce() method
 // var courses=[
 //   {
 //     id:1,
 //     name:'Javascripts',
 //     coin:250
-    
-//   },  
+
+//   },
 //   {
 //     id:2,
 //     name:'html, css',
@@ -191,17 +187,17 @@
 // var i=0;
 // function coinHandle(accumulator, currentValue,currentIndex, originArray) {
 //   i++;
-  //console.log(i,accumulator);
+//console.log(i,accumulator);
 
-  // console.table({
-  //   'luot chay: ':i,
-  //   'bien tich tru: ':accumulator
-  // });  
-  // console.log(currentValue);
+// console.table({
+//   'luot chay: ':i,
+//   'bien tich tru: ':accumulator
+// });
+// console.log(currentValue);
 //   return accumulator+currentValue.coin;
 // }
 // var totalCoin=courses.reduce(coinHandle,0);
-// console.log(totalCoin); 
+// console.log(totalCoin);
 // vong lap for
 // var totalCoin=0;
 
@@ -211,7 +207,7 @@
 // }
 // console.log(totalCoin);
 
-                                  //* Bai 36 Object trong JavaScript
+//* Bai 36 Object trong JavaScript
 // var myInfo={
 //   name: 'duc hai',
 //   age:'18',
@@ -219,13 +215,12 @@
 // }
 // console.log(myInfo['age']);
 
-
 // function User(firstName, lastName,avatar){
 
 //   this.firstName=firstName,
 //   this.lastName=lastName,
 //   this.avatar=avatar;
-  
+
 //   this.getName=function(){
 //     return `${this.firstName} ${this.lastName}`
 //   }
@@ -239,31 +234,28 @@
 
 const inputs = document.querySelectorAll(".input");
 
-
-function addcl(){
-	let parent = this.parentNode.parentNode;
-	parent.classList.add("focus");
+function addcl() {
+  let parent = this.parentNode.parentNode;
+  parent.classList.add("focus");
 }
 
-function remcl(){
-	let parent = this.parentNode.parentNode;
-	if(this.value == ""){
-		parent.classList.remove("focus");
-	}
+function remcl() {
+  let parent = this.parentNode.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
 }
 
-
-inputs.forEach(input => {
-	input.addEventListener("focus", addcl);
-	input.addEventListener("blur", remcl);
+inputs.forEach((input) => {
+  input.addEventListener("focus", addcl);
+  input.addEventListener("blur", remcl);
 });
-
 
 // #38- Object prototype- Basic
 //  prototype là gì?
 //  được sử dụng khi nào?
 
-//Viet 1 function 
+//Viet 1 function
 // function User(firstName, lastName,avatar)
 // {
 //   this.firstName=firstName;
@@ -274,14 +266,14 @@ inputs.forEach(input => {
 //   }
 // }
 // User.prototype.className='F8';
-// console.log(user.className); 
+// console.log(user.className);
 
-// // #39- Doi tuong Date 
+// // #39- Doi tuong Date
 // var date= new Date();
 
 // var year= date.getFullYear();
 // var month=date.getMonth();
-// var day=date.getDate(); 
+// var day=date.getDate();
 
 // console.log(`${day}/${month}/${year}`)
 
@@ -295,7 +287,7 @@ inputs.forEach(input => {
 
 // #41- Tenary operator
 
-// var course ={ 
+// var course ={
 //   name:'Javascript',
 //   coin: 0
 // }
@@ -319,7 +311,7 @@ inputs.forEach(input => {
 //   'Java',
 //   'Dart'
 // ];
- 
+
 // var arrayLength=myArray.length;
 
 // for( var i=0;i<arrayLength;i++)
@@ -328,7 +320,7 @@ inputs.forEach(input => {
 // }
 
 // #43 - For of
-  // 1 Array
+// 1 Array
 // var languages=[
 //   'Javascript',
 //   'PHP',
@@ -339,7 +331,7 @@ inputs.forEach(input => {
 //   console.log(value);
 // }
 
-// vong for loop 
+// vong for loop
 // var languages='12345678';
 // for(var value of languages){
 //   console.log(value);
@@ -351,8 +343,8 @@ inputs.forEach(input => {
 // }
 // console.log(Object.values(myInfo));
 
-  // # bai 44 vong for for/in loop
-  //1 object
+// # bai 44 vong for for/in loop
+//1 object
 //   var myInfo={
 //     name: 'vu',
 //     age:23,
@@ -431,7 +423,7 @@ inputs.forEach(input => {
 // hàm callback?=? gọi 1 hàm trong 1 hàm
 // làm function có hàm số truyền vào
 // khi gọi hàm khác
-// 1. là hàm 
+// 1. là hàm
 // 2. được truyền QUA đối số
 
 // function myFunction(parram){
@@ -463,3 +455,36 @@ inputs.forEach(input => {
 // const a=5;
 // thambien(a);
 // console.log(a);
+
+// phương thức
+// document.getElementById(id)  // tìm id của thẻ
+// document.getElementsByTagName(name) // tìm TẤT CẢ các thẻ thông qua tên thẻ
+// document.getElementsByClassName(name) // tìm tất cả các thẻ thông qua CSS class
+
+// phương thức array map() muốn chỉnh sửa trong 1 array
+var nameArray = [
+  {
+    id: 1,
+    name: "name",
+    coin: 100,
+  },
+  {
+    id: 2,
+    name: "name",
+    coin: 200,
+  },
+  {
+    id: 3,
+    name: "name",
+    coin: 300,
+  },
+];
+function functionName(x) {
+  return {
+    id: x.id,
+    name: `Khoa hoc: ${x.name}`,
+    coin: `Gia: ${x.coin}`,
+  };
+}
+var newArray = nameArray.map(functionName);
+console.log(newArray);
