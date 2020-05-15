@@ -461,30 +461,73 @@ inputs.forEach((input) => {
 // document.getElementsByTagName(name) // tìm TẤT CẢ các thẻ thông qua tên thẻ
 // document.getElementsByClassName(name) // tìm tất cả các thẻ thông qua CSS class
 
-// phương thức array map() muốn chỉnh sửa trong 1 array
+// phương thức array map() muốn chỉnh sửa trong 1 array=> viết thêm vào các element trong mảng
+// var nameArray = [
+//   {
+//     id: 1,
+//     name: "html",
+//     coin: 100,
+//   },
+//   {
+//     id: 2,
+//     name: "java",
+//     coin: 200,
+//   },
+//   {
+//     id: 3,
+//     name: "python",
+//     coin: 300,
+//   },
+// ];
+
+// function functionName(x) {
+//   return {
+//     id: x.id,
+//     name: `ten ngon ngu: ${x.name}`,
+//     coin: `Gia tien: ${x.coin}`,
+//   };
+// }
+// var newArray = nameArray.map(functionName);
+// console.log(newArray);
+
+// phương thức Array reduce() khi muốn 1 phần tử duy nhất, sau khi tính toán or xử lí xong trên các phần tử array
+// => tính toán số coin
 var nameArray = [
   {
     id: 1,
-    name: "name",
+    name: "java",
     coin: 100,
   },
   {
     id: 2,
-    name: "name",
+    name: "html",
     coin: 200,
   },
   {
     id: 3,
-    name: "name",
+    name: "ruby",
     coin: 300,
   },
 ];
-function functionName(x) {
-  return {
-    id: x.id,
-    name: `Khoa hoc: ${x.name}`,
-    coin: `Gia: ${x.coin}`,
-  };
+// C1: dùng vòng lặp for, khi ta dùng vòng lặp reduce()=> giúp chúng ta có cách viết ngắn gọn hơn
+// var totalCoin = 0;
+// for (var i of nameArray) {
+//   totalCoin += i.coin;
+// }
+// console.log(totalCoin);
+
+// C2: dùng Array reduce() method
+var i = 0;
+function functionName(accumulator, currentValue, currentIndex, originArray) {
+  i++;
+
+  // console.table({
+  //   "Lượt chạy: ": i,
+  //   "Biến lưu trữ": accumulator,
+  //   "Giá trị hiện tại": currentValue,
+  //   "Giá khóa học": currentValue.coin,
+  // });
+  return accumulator + currentValue.coin;
 }
-var newArray = nameArray.map(functionName);
-console.log(newArray);
+var totalCoin = nameArray.reduce(functionName, 0); //giá trị khởi tạo
+console.log(totalCoin);
