@@ -492,23 +492,23 @@ inputs.forEach((input) => {
 
 // phương thức Array reduce() khi muốn 1 phần tử duy nhất, sau khi tính toán or xử lí xong trên các phần tử array
 // => tính toán số coin
-var nameArray = [
-  {
-    id: 1,
-    name: "java",
-    coin: 100,
-  },
-  {
-    id: 2,
-    name: "html",
-    coin: 200,
-  },
-  {
-    id: 3,
-    name: "ruby",
-    coin: 300,
-  },
-];
+// var nameArray = [
+//   {
+//     id: 1,
+//     name: "java",
+//     coin: 100,
+//   },
+//   {
+//     id: 2,
+//     name: "html",
+//     coin: 200,
+//   },
+//   {
+//     id: 3,
+//     name: "ruby",
+//     coin: 300,
+//   },
+// ];
 // C1: dùng vòng lặp for, khi ta dùng vòng lặp reduce()=> giúp chúng ta có cách viết ngắn gọn hơn
 // var totalCoin = 0;
 // for (var i of nameArray) {
@@ -517,17 +517,30 @@ var nameArray = [
 // console.log(totalCoin);
 
 // C2: dùng Array reduce() method
-var i = 0;
-function functionName(accumulator, currentValue, currentIndex, originArray) {
-  i++;
+// var i = 0;
+// function functionName(accumulator, currentValue, currentIndex, originArray) {
+//   i++;
 
-  // console.table({
-  //   "Lượt chạy: ": i,
-  //   "Biến lưu trữ": accumulator,
-  //   "Giá trị hiện tại": currentValue,
-  //   "Giá khóa học": currentValue.coin,
-  // });
-  return accumulator + currentValue.coin;
-}
-var totalCoin = nameArray.reduce(functionName, 0); //giá trị khởi tạo
-console.log(totalCoin);
+// console.table({
+//   "Lượt chạy: ": i,
+//   "Biến lưu trữ": accumulator,
+//   "Biến hiện tại": currentValue,
+//   Biến: currentValue.coin,
+// });
+//   return accumulator + currentValue.coin;
+// }
+// var totalCoin = nameArray.reduce(functionName, 0); //giá trị khởi tạo
+// console.log(totalCoin);
+
+// bài tập về hàm Array reduce()
+// Flat- làm phẳng mảng
+var deptArrray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+
+var flatArray = deptArrray.reduce(function (flatOutput, deptItem) {
+  console.table({
+    "Biến lưu trữ": flatOutput,
+    "Biến hiện tại": deptItem,
+  });
+  return flatOutput.concat(deptItem);
+}, []);
+console.log(flatArray);
