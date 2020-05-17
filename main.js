@@ -534,13 +534,133 @@ inputs.forEach((input) => {
 
 // bài tập về hàm Array reduce()
 // Flat- làm phẳng mảng
-var deptArrray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+// var deptArrray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
 
-var flatArray = deptArrray.reduce(function (flatOutput, deptItem) {
-  console.table({
-    "Biến lưu trữ": flatOutput,
-    "Biến hiện tại": deptItem,
-  });
-  return flatOutput.concat(deptItem);
-}, []);
-console.log(flatArray);
+// var flatArray = deptArrray.reduce(function (flatOutput, deptItem) {
+//   console.table({
+//     "Biến lưu trữ": flatOutput,
+//     "Biến hiện tại": deptItem,
+//   });
+//   return flatOutput.concat(deptItem);
+// }, []);
+// console.log(flatArray);
+
+// String/Array include() method
+// var courses = ["Java", "PHP", "C/C++"];
+// // 3+-1=2
+// console.log(courses.includes("C/C++", -1));
+
+//Array Constructor
+// let i = 0;
+// const arr = new Array(5);
+// arr.forEach(() => i++);
+// console.log(i);
+//arr = [1, 2, 4, 5, 6, 6];
+// function getNumberArray(arr) {
+//   let setVarriable = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (setVarriable < arr[i]) {
+//       setVarriable = arr[i];
+//     }
+//   }
+//   return setVarriable;
+//   console.log(setVarriable);
+// }
+// arr = [1, 2, 4, 5, 6, 6];
+// console.log(arr);
+// function greatestNumberInArray(arr) {
+//   let greatest = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (greatest < arr[i]) {
+//       greatest = arr[i];
+//     }
+//   }
+//   return greatest;
+// }
+// fucntion tìm số lớn nhất trong mảng
+// max([4, 12, 3, 8, 0, 22, 56]); //output is 56
+// function max(arr) {
+//   var max = arr[0];
+//   for (var i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   console.log(max);
+//   // return max;
+// }
+
+//Polyfill?
+//Object
+// var myInfo = {
+//   name: "hai",
+//   age: 23,
+//   address: "tphcm",
+//   getName: function () {
+//     return this.name;
+//   },
+// };
+// console.log(myInfo.getName());
+
+// Object Constructor/ Object prototype
+// Viết hoa chữ cái đầu của Object Constructor
+// function User(firstName, lastName, avatar) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.avatar = avatar;
+
+//   this.getName = function () {
+//     return `${this.firstName} ${this.lastName}`;
+//   };
+// }
+// User.prototype.className = "F8"; // từ khóa prototype có tác dụng thêm key-value ngoài thuộc tính vô hàm tạo
+// var author = new User("Vũ", "Đức");
+// var user = new User("Đức", "Hải");
+
+// console.log(author);
+// console.log(user);
+// console.log(author.constructor === User);
+// console.log(author.getName());
+// console.log(user);
+
+// FOR-IN LOOP dùng vòng lặp này để lấy ra key của đối tượng(OBJECT)
+// OBJECT- FOR-IN
+// var myInfo = {
+//   name: "Vu Hai",
+//   age: "18",
+//   address: "to ky",
+// };
+// for (var key in myInfo) {
+//   console.log(key); // in ra key trong object
+//   console.log(myInfo[key]); // in ra value của key trong object
+// }
+// //ARRAY-FOR-IN
+// var languages = ["Javascript", "Java", "C/C++"];
+// for (var key in languages) {
+//   console.log(languages[key]); // in ra value trong array
+//   console.log(key); // in ra số thứ tự trong array
+// }
+// // String-FOR-IN
+// var languages = "Javascript";
+// for (var key in languages) {
+//   console.log(languages[key]);
+// }
+
+// FOR-OF LOOP dùng vòng lặp để lấy ra key của chuỗi và mảng(k 'áp dụng' cho object, nếu là object sửa thay đổi 1 chút)
+// var languages = ["Javascript", "C/C++", "Java"];
+// for (var value of languages) {
+//   console.log(value);
+// }
+// đổi với OBJECT
+var languages = {
+  name: "Vu Hai",
+  age: 18,
+};
+// lấy ra value
+for (var value of Object.values(languages)) {
+  console.log(value);
+}
+// lấy ra keys
+for (var value of Object.keys(languages)) {
+  console.log(value);
+}
