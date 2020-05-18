@@ -125,7 +125,7 @@ html {
 /* css notification */
 .header__notification {
   position: absolute;
-  top: 100%;
+  top: 120%;
   width: 404px;
   right: 0px;
   background-color: #fff;
@@ -134,6 +134,15 @@ html {
   transform-origin: calc(100%-20px) top;
   animation: headerNotificationGrowth ease-in 0.25s;
   display: none;
+}
+.header__notification::before {
+  content: "";
+  border-width: 20px 30px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  right: 12px;
+  top: -30px;
 }
 /* bật tắt thông báo */
 @keyframes headerNotificationGrowth {
