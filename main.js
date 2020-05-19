@@ -652,15 +652,110 @@ inputs.forEach((input) => {
 //   console.log(value);
 // }
 // đổi với OBJECT
-var languages = {
-  name: "Vu Hai",
-  age: 18,
+// var languages = {
+//   name: "Vu Hai",
+//   age: 18,
+// };
+// // lấy ra value
+// for (var value of Object.values(languages)) {
+//   console.log(value);
+// }
+// // lấy ra keys
+// for (var value of Object.keys(languages)) {
+//   console.log(value);
+// }
+
+//P1
+//Callback? 1.là hàm, 2.được truyền qua đối số //gọi hàm qua hàm khác, hàm trong hàm
+// function myFunction(param) {
+//   //kiểm tra tham số truyền vào phải là hàm
+//   if (typeof param === "function") {
+//     param("truyền tham số");
+//     console.log(param);
+//   }
+// }
+// function myCallback(value) {
+//   console.log("callback", value);
+// }
+// myFunction(myCallback);
+
+//P2 khi làm việc với mảng
+// var languages = ["Javascript", "Java", "C/C++", "PHP"];
+
+// // in ra các phần tử trong mảng
+// languages.map(function (param) {
+//   //map là 1 hàm, đối số là function
+//   console.log(param);
+// });
+
+// //nối thêm các phần tử dùng "map"
+// var htmls = languages.map(function (param) {
+//   return `<h2>${param}</h2>`;
+// });
+// console.log(htmls.join(""));
+
+// // dùng map 2
+// // do map2 chưa được định nghĩa sẵn, nên bắt buộc định nghĩa hàm
+// var value = ["chuoi1", "chuoi2", "chuoi3", "chuoi4", "chuoi5"];
+// // định nghĩa cho map2
+// Array.prototype.map2 = function (callback) {
+//   // console.log(this);
+//   var arrayLength = this.length;
+//   for (var i = 0; i < arrayLength; i++) {
+//     var result = callback(this[i], i);
+//     console.log(result);
+//   }
+// };
+// var htmls = value.map2(function (value) {
+//   // console.log(value);
+//   return `<h2>${value}</h2>`;
+// });
+
+// var arrayName = ["chuoi1", "chuoi2", "chuoi3", "chuoi7", "chuoi5"];
+// //định nghĩa hàm map2
+// Array.prototype.map2 = function (callback) {
+//   var arrayLength = this.length;
+//   for (var i = 0; i < arrayLength; i++) {
+//     var result = callback(this[i]);
+//     console.log(result);
+//   }
+// };
+// var htmls = arrayName.map2(function (arrayName) {
+//   return `<h2>${arrayName}</h2>`;
+// });
+
+// CALLBACK();
+// để là hàm callback cần: phải là 1 hàm, có đối số truyền vào
+//P1
+function functionA(param) {
+  param("tặng quà hàng xóm");
+}
+function functionB(value) {
+  console.log("vợ đi", value);
+}
+functionA(functionB);
+
+//P2 làm việc với mảng
+var languages = ["javascript", "java", "python"];
+languages.map(function (x) {
+  console.log(x);
+});
+//thêm các phần tử
+var htmls = languages.map(function (param) {
+  return `<h2>${param}<\h2>`;
+});
+console.log(htmls.join(""));
+
+//P2 làm việc với mảng với map2
+var languages = ["javascript", "java", "python"];
+//định nghĩa map2
+Array.prototype.map2 = function (functionCallback) {
+  var arryLenghth = this.length;
+  for (var i = 0; i < arryLenghth; i++) {
+    var result = functionCallback(this[i]);
+    console.log(result);
+  }
 };
-// lấy ra value
-for (var value of Object.values(languages)) {
-  console.log(value);
-}
-// lấy ra keys
-for (var value of Object.keys(languages)) {
-  console.log(value);
-}
+var htmls = languages.map2(function (languages) {
+  return `<h2>${languages}</h2>`;
+});
