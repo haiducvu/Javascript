@@ -727,35 +727,44 @@ inputs.forEach((input) => {
 // CALLBACK();
 // để là hàm callback cần: phải là 1 hàm, có đối số truyền vào
 //P1
-function functionA(param) {
-  param("tặng quà hàng xóm");
-}
-function functionB(value) {
-  console.log("vợ đi", value);
-}
-functionA(functionB);
+// function functionA(param) {
+//   param("tặng quà hàng xóm");
+// }
+// function functionB(value) {
+//   console.log("vợ đi", value);
+// }
+// functionA(functionB);
 
-//P2 làm việc với mảng
-var languages = ["javascript", "java", "python"];
-languages.map(function (x) {
-  console.log(x);
-});
-//thêm các phần tử
-var htmls = languages.map(function (param) {
-  return `<h2>${param}<\h2>`;
-});
-console.log(htmls.join(""));
+// //P2 làm việc với mảng
+// var languages = ["javascript", "java", "python"];
+// languages.map(function (x) {
+//   console.log(x);
+// });
+// //thêm các phần tử
+// var htmls = languages.map(function (param) {
+//   return `<h2>${param}<\h2>`;
+// });
+// console.log(htmls.join(""));
 
-//P2 làm việc với mảng với map2
-var languages = ["javascript", "java", "python"];
-//định nghĩa map2
-Array.prototype.map2 = function (functionCallback) {
-  var arryLenghth = this.length;
-  for (var i = 0; i < arryLenghth; i++) {
-    var result = functionCallback(this[i]);
-    console.log(result);
-  }
-};
-var htmls = languages.map2(function (languages) {
-  return `<h2>${languages}</h2>`;
+// //P2 làm việc với mảng với map2
+// var languages = ["javascript", "java", "python"];
+// //định nghĩa map2
+// Array.prototype.map2 = function (functionCallback) {
+//   var arryLenghth = this.length;
+//   for (var i = 0; i < arryLenghth; i++) {
+//     var result = functionCallback(this[i]);
+//     console.log(result);
+//   }
+// };
+// var htmls = languages.map2(function (languages) {
+//   return `<h2>${languages}</h2>`;
+// });
+
+// #Empty element of array?
+//forEach, find, filter, some, every, reduce
+//  #58 My forEach()
+var languages = ["Javascript", "Python", "PHP"];
+//forEach hoạt động như 1 vòng lặp for
+languages.forEach(function (value, index, array) {
+  console.log(value, index, array);
 });
