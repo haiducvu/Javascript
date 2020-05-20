@@ -769,8 +769,11 @@ inputs.forEach((input) => {
 //   console.log(value, index, array);
 // });
 
-//  #DOM là #khi trang web được lại thì trình duyệt tạo ra 1DOM cho trang trang web
+// #DOM là #khi trang web được lại thì trình duyệt tạo ra 1DOM cho trang trang web
 // Có mô hình dạng cây(gọi là htmlDOM)
 // DOM có 3 thành phần: element, attribute, text
 
-//HTML DOM
+//HTML DOM => element method
+//Các thành phần 1.Element 2.attribute 3.text
+//1.Element là tag ở trong DOM
+//2.attribute là thuộc tính ở trong thẻ mở
