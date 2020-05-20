@@ -763,8 +763,14 @@ inputs.forEach((input) => {
 // #Empty element of array?
 //forEach, find, filter, some, every, reduce
 //  #58 My forEach()
-var languages = ["Javascript", "Python", "PHP"];
-//forEach hoạt động như 1 vòng lặp for
-languages.forEach(function (value, index, array) {
-  console.log(value, index, array);
-});
+// var languages = ["Javascript", "Python", "PHP"];
+// //forEach hoạt động như 1 vòng lặp for
+// languages.forEach(function (value, index, array) {
+//   console.log(value, index, array);
+// });
+
+//  #DOM là #khi trang web được lại thì trình duyệt tạo ra 1DOM cho trang trang web
+// Có mô hình dạng cây(gọi là htmlDOM)
+// DOM có 3 thành phần: element, attribute, text
+
+//HTML DOM
