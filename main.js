@@ -777,3 +777,4 @@ inputs.forEach((input) => {
 //Các thành phần 1.Element 2.attribute 3.text
 //1.Element là tag ở trong DOM
 //2.attribute là thuộc tính ở trong thẻ mở
+
