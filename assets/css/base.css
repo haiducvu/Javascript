@@ -1,0 +1,10 @@
+@keyframes growth {
+  from {
+    transform: scale(var(--growth-from));
+  }
+  to {
+    transform: scale(var(--growth-to));
+  }
+}
+
+/* xem lại Modal animation- Video 51 */
