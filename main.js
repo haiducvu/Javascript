@@ -777,3 +777,17 @@ inputs.forEach((input) => {
 //Các thành phần 1.Element 2.attribute 3.text
 //1.Element là tag ở trong DOM
 //2.attribute là thuộc tính ở trong thẻ mở
+
+//arrow function
+//hàm nguyên mẫu
+let func = function (arg1, arg2, ...argN) {
+  return expression;
+};
+
+// This arrow function
+let sum = function (a, b) {
+  return a + b;
+};
+alert(sum(1, 2));
+//arrow function
+let sum = (a, b) => a + b;
