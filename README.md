@@ -34,7 +34,9 @@ display:block;
 display.block;
 }
 }
-PC: width: >=1024px
+
+<!-- PC: width: >=1024px -->
+
 @media only screen and (min-width:1024px){
 
 }
