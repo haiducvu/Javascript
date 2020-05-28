@@ -780,14 +780,29 @@ inputs.forEach((input) => {
 
 //arrow function
 //hàm nguyên mẫu
-let func = function (arg1, arg2, ...argN) {
-  return expression;
-};
+// let func = function (arg1, arg2, ...argN) {
+//   return expression;
+// };
 
-// This arrow function
-let sum = function (a, b) {
-  return a + b;
-};
-alert(sum(1, 2));
-//arrow function
-let sum = (a, b) => a + b;
+// // This arrow function
+// let sum = function (a, b) {
+//   return a + b;
+// };
+// alert(sum(1, 2));
+// //arrow function
+// let sum = (a, b) => a + b;
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  function () {
+    alert("You agreed.");
+  },
+  function () {
+    alert("You canceled the execution.");
+  }
+);
