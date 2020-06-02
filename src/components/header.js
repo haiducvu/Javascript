@@ -1,12 +1,24 @@
 import React, { Component } from "react";
 
-class header extends Component {
+class Header extends Component {
   render() {
     return (
-      <div>
-        <h1>Header</h1>
-      </div>
+      <nav className="navbar navbar-inverse">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            Component
+          </a>
+          <ul className="nav navbar-nav">
+            <li className="active">
+              <a href="#">Home</a>
+            </li>
+            <li className="active">
+              <a href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     );
   }
 }
-export default header;
+export default Header;
