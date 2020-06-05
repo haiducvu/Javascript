@@ -8,10 +8,10 @@ class App extends Component {
         <Header />
         <div className="row">
           <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <Product />
+            <Product name="Appple Ihpone 12" price="20000000" />
           </div>
           <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <Product />
+            <Product name="Apple Iphone 11" price="10000000" />
           </div>
         </div>
       </div>
