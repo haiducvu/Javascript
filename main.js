@@ -232,24 +232,24 @@ Array methods:
 // console.log(author.getName());
 // console.log(user);
 
-const inputs = document.querySelectorAll(".input");
+// const inputs = document.querySelectorAll(".input");
 
-function addcl() {
-  let parent = this.parentNode.parentNode;
-  parent.classList.add("focus");
-}
+// function addcl() {
+//   let parent = this.parentNode.parentNode;
+//   parent.classList.add("focus");
+// }
 
-function remcl() {
-  let parent = this.parentNode.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
+// function remcl() {
+//   let parent = this.parentNode.parentNode;
+//   if (this.value == "") {
+//     parent.classList.remove("focus");
+//   }
+// }
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", addcl);
-  input.addEventListener("blur", remcl);
-});
+// inputs.forEach((input) => {
+//   input.addEventListener("focus", addcl);
+//   input.addEventListener("blur", remcl);
+// });
 
 // #38- Object prototype- Basic
 //  prototype là gì?
@@ -439,15 +439,15 @@ inputs.forEach((input) => {
 // Tham trị, tham chiếu trong js?
 // Các khái niệm: stored by value, stored by reference, pass by value, pass by reference
 // **tham trị=> lưu giá trị trực tiếp khi nhận được
-// let a=5;
-// let b=a;
-// a=10;
+// let a = 5;
+// let b = a;
+// a = 10;
 // console.log(b);
 // // **tham biến=> lưu lại địa chỉ
-// const a={name:'hau'};
-// const b=a;
-// a.name='Po';
-// console.log(b.name);
+const a = { name: "hau" };
+const b = a;
+a.name = "Po";
+console.log(b.name);
 // truyền tham số dạng tham trị
 // function thambien(number){
 //   number =10;
@@ -780,14 +780,14 @@ inputs.forEach((input) => {
 
 //arrow function
 //hàm nguyên mẫu
-let func = function (arg1, arg2, ...argN) {
-  return expression;
-};
+// let func = function (arg1, arg2, ...argN) {
+//   return expression;
+// };
 
-// This arrow function
-let sum = function (a, b) {
-  return a + b;
-};
-alert(sum(1, 2));
-//arrow function
-let sum = (a, b) => a + b;
+// // This arrow function
+// let sum = function (a, b) {
+//   return a + b;
+// };
+// alert(sum(1, 2));
+// //arrow function
+// let sum = (a, b) => a + b;
