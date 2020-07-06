@@ -2,41 +2,39 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { render } from "@testing-library/react";
-// import App from "./App";
-class UserDetail extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>Name:{this.props.name}</p>
-        <p>Email:{this.props.email}</p>
-      </div>
-    );
+import Form from "./components/Form";
+class Counter extends React.Component {
+  constructor(props) {
+    super();
+    this.state = { seconds: 0 };
   }
-}
-class UserotherInfo extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>Thong tin co ban: {this.props.otherInfomation}</p>
-      </div>
-    );
+  incrementCounter() {
+    // this.state=this.state+1;
+    this.setState((preSate, props) => ({
+      seconds: preSate.seconds + 1,
+    }));
   }
-}
-class UserInfo extends React.Component {
+  componentDidMount() {
+    this.timerID = setInterval(() => this.incrementCounter(), 1000);
+  }
+  componentWillMount() {
+    clearInterval(this.timerID);
+  }
   render() {
     return (
       <div>
-        <UserDetail name={this.props.name} email={this.props.email} />
-        <UserotherInfo otherInfomation={this.props.otherInfomation} />
+        <h1>This is counter machine: </h1>
+        <h2>Seconds:{this.state.seconds} s</h2>
+        <Form></Form>
       </div>
     );
   }
 }
 const element = (
-  <UserInfo
-    name="hai"
-    email="duchaivu1997@gmail.com"
-    otherInfomation="I am newbie"
+  <Counter
+  // name="hai"
+  // email="duchaivu1997@gmail.com"
+  // otherInfomation="I am newbie"
   />
 );
 // ReactDOM.render(<App />, document.getElementById("root"));
