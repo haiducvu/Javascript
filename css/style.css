@@ -1,0 +1,31 @@
+.navbar {
+  background-color: white !important;
+}
+.navbar a.navbar-branch span {
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.navbar a {
+  color: white;
+}
+.navbar a.navbar-branch .logo-branch {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0;
+  color: black;
+}
+.navbar li a {
+  color: black !important;
+}
+.navbar a.navbar-branch label {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: rgb(251, 71, 101);
+  text-align: center;
+}
+.navbar li a:hover {
+  color: black !important;
+}
