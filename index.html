@@ -7,59 +7,335 @@
     <!-- Import Boostrap css, js, font awesome here -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
     <link
-      href="https://use.fontawesome.com/releases/v5.0.4/css/all.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-expand-md navbar-light bg-light sticky-top container"
-    >
-      <div class="container-fluid">
-        <a class="navbar-branch" href="#">
-          <div class="logo-branch d-flex">
-            <i class="fa fa-book fa-2x"></i>
-            <span>Instruction</span>
+    <!-- TOP-MENU -->
+    <div class="top-menu">
+      <div class="top-menu-left">
+        <ul>
+          <li>
+            <i class="fa fa-phone ml-3"></i>
+            <span>0792094055</span>
+          </li>
+          <li>
+            <i class="fa fa-envelope-o ml-3"></i>
+            <span>info@example.com</span>
+          </li>
+        </ul>
+      </div>
+      <div class="top_menu_right">
+        <div class="w3ls-social-icons text-left">
+          <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+          <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+          <a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+          <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- HEADER -->
+    <header class="container">
+      <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <div class="d-flex">
+            <i class="fa fa-book m-2"></i>
+            <span>INSTRUCTION</span>
           </div>
           <label class="w-100">EDUCATION</label>
         </a>
 
+        <!-- Toggler/collapsible Button -->
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarResponsive"
+          data-target="#collapsibleNavbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto nav-menu">
+            <li class="nav-item active">
+              <a class="nav-link color" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">SERVICE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">GALLEY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PAGE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Carousel -->
+    <section id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/banner1.jpg" alt="Los Angeles" />
+          <div class="carousel-caption">
+            <h3>Graphic Work <span>Designing</span></h3>
+            <p>
+              Any successful career starts with good education. Together with us
+              you will have deeper knowledge of the subjects
+            </p>
+            <div class="agileits-button top_ban_agile">
+              <a
+                class="btn btn-custom btn-lg"
+                href="#"
+                data-toggle="modal"
+                data-target="#myModal"
+                >Read More »</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/banner3.jpg" alt="Chicago" />
+          <div class="carousel-caption">
+            <h3>Financial Analyst <span>Course.</span></h3>
+            <p>
+              Any successful career starts with good education. Together with us
+              you will have deeper knowledge of the subjects
+            </p>
+            <div class="agileits-button top_ban_agile">
+              <a
+                class="btn btn-custom btn-lg"
+                href="#"
+                data-toggle="modal"
+                data-target="#myModal"
+                >Read More »</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/banner2.jpg" alt="New York" />
+          <div class="carousel-caption">
+            <h3>Digital Marketing <span>Course.</span></h3>
+            <p>
+              Any successful career starts with good education. Together with us
+              you will have deeper knowledge of the subjects
+            </p>
+            <div class="agileits-button top_ban_agile">
+              <a
+                class="btn btn-custom btn-lg"
+                href="#"
+                data-toggle="modal"
+                data-target="#myModal"
+                >Read More »</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Connect</a>
-          </li>
-        </ul>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </section>
+    <!-- about -->
+    <div class="agile-about w3ls-section text-center" id="about">
+      <div class="container">
+        <h3 class="heading-agileinfo">
+          Welcome To Education<span>When Climbing The Carrer Ladder</span>
+        </h3>
+        <div class="agileits-about-grid">
+          <p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, sunt in culpa qui officia deserunt mollit
+            anim id est laboth. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur sunt in
+            culpa qui .
+          </p>
+        </div>
       </div>
-    </nav>
+    </div>
+    <!-- ABOUT-BOTTOM -->
+    <!-- about-bottom -->
+    <div class="agileits-about-btm">
+      <div class="container">
+        <div class="w3-flex">
+          <div class="col-md-4 col-sm-4 col-xs-12 ab1 agileits-about-grid1">
+            <span class="fa fa-desktop" aria-hidden="true"></span>
+            <h4 class="agileinfo-head">Design Course</h4>
+            <h5>Fashion Design</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+            <h5>Interior Design</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+            <h5>Graphic Design</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+          </div>
+          <div class="col-md-4 col-sm-4 ab1 agileits-about-grid2">
+            <span
+              class="fa fa-arrows wthree-title-list"
+              aria-hidden="true"
+            ></span>
+            <h4 class="agileinfo-head">Marketing Course</h4>
+            <h5>Facebook Marketing</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+            <h5>YouTube Marketing</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+            <h5>Twitter Marketing</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+          </div>
+          <div class="col-md-4 col-sm-4 ab1 agileits-about-grid3">
+            <span
+              class="fa fa-bar-chart wthree-title-list"
+              aria-hidden="true"
+            ></span>
+            <h4 class="agileinfo-head">Financial Course</h4>
+            <h5>Complexities of banking</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+            <h5>Compliance regulations</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+            <h5>Finance products</h5>
+            <p>Ncididunt ut labore et t enim ad minim.</p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!-- //about-bottom -->
+    <!-- stats -->
+    <div id="carousel">
+      <div class="container">
+        <h3 class="heading-agileinfo">
+          Our Stats<span class="ttt">When Climbing The Carrer Ladder </span>
+        </h3>
+        <div class="w3-flex">
+          <div class="col-md-3 w3layouts_stats_left w3_counter_grid">
+            <span class="fa fa-graduation-cap" aria-hidden="true"></span>
+            <h3>Graduates</h3>
+            <p class="counter">45</p>
+          </div>
+          <div class="col-md-3 w3layouts_stats_left w3_counter_grid1">
+            <span class="fa fa-user" aria-hidden="true"></span>
+            <h3>Certified Staff</h3>
+            <p class="counter">165</p>
+          </div>
+          <div class="col-md-3 w3layouts_stats_left w3_counter_grid2">
+            <span class="fa fa-users" aria-hidden="true"></span>
+            <h3>Student</h3>
+            <p class="counter">563</p>
+          </div>
+          <div class="col-md-3 w3layouts_stats_left w3_counter_grid3">
+            <span class="fa fa-trophy" aria-hidden="true"></span>
+            <h3>Awards</h3>
+            <p class="counter">245</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- //stats -->
+    <!-- services -->
+    <div class="services">
+      <h3 class="heading-agileinfo">
+        What we offer<span>When Climbing The Carrer Ladder </span>
+      </h3>
+      <div class="container">
+        <div class="services-top-grids w3-flex">
+          <div class="col-md-4">
+            <div class="grid1">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <h4>Undergraduate Study</h4>
+              <p>
+                Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="grid1">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <h4>Professional Study</h4>
+              <p>
+                Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="grid1">
+              <i class="fa fa-tasks" aria-hidden="true"></i>
+              <h4>Programs</h4>
+              <p>
+                Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="services-bottom-grids w3-flex">
+          <div class="col-md-4">
+            <div class="grid1">
+              <i class="fa fa-comment-o" aria-hidden="true"></i>
+              <h4>Online Learning</h4>
+              <p>
+                Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="grid1">
+              <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+              <h4>Summer Session</h4>
+              <p>
+                Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="grid1">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              <h4>Global Education</h4>
+              <p>
+                Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!-- //services -->
   </body>
 </html>
