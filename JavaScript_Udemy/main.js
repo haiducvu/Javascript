@@ -263,3 +263,30 @@
 // x=10;
 // console.log(x);
 // var x;
+
+
+//  5. ADVANCED JAVASCRIPT OBJECT AND FUNCTION
+//  Creating Objects Function Constructor
+  
+// var john={
+//     name: 'John',
+//     birthday: 1990,
+//     job: 'teacher',
+// };
+
+var Person= function(name, birthday, job){
+  this.name= name;
+  this.birthday= birthday;
+  this.job= job; 
+}
+
+Person.prototype.calculateAge= function(){
+  console.log(2016- this.birthday);
+}
+
+Person.prototype.lastname= 'Smith';
+
+var john= new Person('John', 1990, 'teacher');
+
+john.calculateAge();
+console.log('LastName',john.lastname);
