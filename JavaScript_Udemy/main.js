@@ -274,19 +274,65 @@
 //     job: 'teacher',
 // };
 
-var Person= function(name, birthday, job){
-  this.name= name;
-  this.birthday= birthday;
-  this.job= job; 
-}
+// var Person= function(name, birthday, job){
+//   this.name= name;
+//   this.birthday= birthday;
+//   this.job= job; 
+// }
 
-Person.prototype.calculateAge= function(){
-  console.log(2016- this.birthday);
-}
+// Person.prototype.calculateAge= function(){
+//   console.log(2016- this.birthday);
+// }
 
-Person.prototype.lastname= 'Smith';
+// Person.prototype.lastname= 'Smith';
 
-var john= new Person('John', 1990, 'teacher');
+// var john= new Person('John', 1990, 'teacher');
 
-john.calculateAge();
-console.log('LastName',john.lastname);
+// john.calculateAge();
+// console.log('LastName',john.lastname);
+
+//   // 7. Primitives- Object
+// var age= 27;
+// var obj={
+//   name:'hai',
+//   city:'New York',
+// }
+
+// function change(a, b){
+//   a=30; 
+//   b.city='Sai Gon';
+// }
+
+// change(age, obj.city);
+
+// console.log(age);
+// console.log(obj.city);
+
+  // 8. First Class Function Passing Functions as Argument
+
+  var years=[1990, 1965, 1037, 2005];
+
+  function arrayCalc(arr, fn){
+    var  arrRes=[];
+    for(var i=0; i< arr.length; i++){
+      arrRes.push(fn(arr[i]));
+    } 
+    return arrRes;
+  }
+
+  function calculateAge(el){
+    return 2016- el;
+  }
+
+  function isFullAge(el){
+    return el>=18
+  }
+
+  
+
+  var ages= arrayCalc(years, calculateAge); // here don't want call function, mean be called later by the arrayCalc function
+                                                // => callback function 
+  console.log('ages', ages);
+
+  var isFullAges= arrayCalc(ages, isFullAge);
+  console.log('isFullAges', isFullAges);
