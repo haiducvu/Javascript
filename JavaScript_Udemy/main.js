@@ -298,41 +298,90 @@
 //   city:'New York',
 // }
 
-// function change(a, b){
+// function change(a, b){ 
 //   a=30; 
+//   console.log(a);
 //   b.city='Sai Gon';
+//   console.log(b);
 // }
+// change(age, obj); 
 
-// change(age, obj.city);
-
-// console.log(age);
-// console.log(obj.city);
+// console.log("TUOI",age);
+// console.log("DIA DANH",obj.city);
 
   // 8. First Class Function Passing Functions as Argument
 
-  var years=[1990, 1965, 1037, 2005];
+  // var years=[1990, 1965, 1037, 2005];
 
-  function arrayCalc(arr, fn){
-    var  arrRes=[];
-    for(var i=0; i< arr.length; i++){
-      arrRes.push(fn(arr[i]));
-    } 
-    return arrRes;
-  }
+  // function arrayCalc(arr, fn){
+  //   var  arrRes=[];
+  //   for(var i=0; i< arr.length; i++){
+  //     arrRes.push(fn(arr[i]));
+  //   } 
+  //   return arrRes;
+  // }
 
-  function calculateAge(el){
-    return 2016- el;
-  }
+  // function calculateAge(el){
+  //   return 2016- el;
+  // }
 
-  function isFullAge(el){
-    return el>=18
-  }
+  // function isFullAge(el){
+  //   return el>=18
+  // }
 
   
 
-  var ages= arrayCalc(years, calculateAge); // here don't want call function, mean be called later by the arrayCalc function
-                                                // => callback function 
-  console.log('ages', ages);
+  // var ages= arrayCalc(years, calculateAge); // here don't want call function, mean be called later by the arrayCalc function
+  //                                               // => callback function 
+  // console.log('ages', ages);
 
-  var isFullAges= arrayCalc(ages, isFullAge);
-  console.log('isFullAges', isFullAges);
+  // var isFullAges= arrayCalc(ages, isFullAge);
+  // console.log('isFullAges', isFullAges);
+
+  // 9. First Class Functions Functions Returning Function
+  // Function return function 
+
+//   function interViewQuestion(job){
+//     if(job==='designed'){
+//       return function(name){
+//         console.log(name+ ' aaaaaa');
+//       }
+//     }else if(job==='teacher'){
+//      return function(name){
+//        console.log(name+ ' bbbbb');
+//      }
+//     }else{
+//       return function(name){
+//         console.log(name+ ' cccccc');
+//       }
+//     }
+//   }
+
+// var teacherQuestion= interViewQuestion('teacher');  
+// teacherQuestion('Hai'); 
+
+// interViewQuestion('desinged')('VU DUC HAI');
+
+  //10. IMMEDIATELY INVOKED FUNCTION EXPRESSTION  
+  
+  //11. CLOSURES
+  function retirement(retirementAge){
+    a= 'years left until retirement.';
+    return function(yearofBirth){
+      var age= 2021- yearofBirth;
+      console.log((retirementAge- age)+a);
+    }
+  }
+
+  let retirementUS= retirement(66); 
+  let retimentGemeny= retirement(65);
+  let retimentIceland= retirement(64);
+
+ retirementUS(2021);
+ retirement(66)(2021);
+
+  //12. Bind, Call and Apply
+
+
+
+ 
