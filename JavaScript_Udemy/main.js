@@ -205,7 +205,7 @@
 //   fullName: 'Vu Duc Hai',
 //   bills:[124, 48, 268, 180, 42],
 //   callTips: function(){
-//     this.tips=[];
+//     this.tips=[]; 
 //     this.finalValues=[];
 
 //     for(var i=0; i<this.bills.length;i++){
@@ -233,11 +233,11 @@
 // console.log(john);
 
 
-  /**Phần 2: Bài 6: Hosting in Practice */
-//variable 
-//   console.log(age);
-//   var age=23;
-// console.log(age);
+  /**Phần 2: Bài 6: Hosting in Practice */ 
+
+  // console.log(age);
+  // var age=23;
+  // console.log(age);
 //   function foo(){
 //     var age= 65;
 //     console.log(age);
@@ -382,7 +382,7 @@
 
   
 // 12. Code Challengen
-
+/*
 (function(){
   function Question(question, answers, correct){
     this.question= question;
@@ -398,14 +398,26 @@
     }
   }
   
-  Question.prototype.checkAnwers= function (ans){
+  Question.prototype.checkAnwers= function (ans, callBack){
     if(ans=== this.correct){
+      var sc;
       console.log('Correct answers!');
+      sc= callBack(true);
+      console.log('sc',sc);
     }else{
       console.log('Wrong answer, Try again');
+      sc= callBack(false);
+      console.log('sc',sc);
     }
+
+    this.displayScore(sc);
   }
   
+  Question.prototype.displayScore= function (score){
+    console.log('Your current score is: '+ score);
+    console.log('======================');
+  }
+
   var q1= new Question('In JavaScript is language programming?', ['Yes', 'No'], 0);
   
   var q2= new Question('Who is winner of the award?', ['John', 'Micheal', 'Thomas'], 2);
@@ -415,13 +427,37 @@
   var q4= new Question('Who is singer?', ['John', 'Micheal', 'Thomas'], 3);
   
   var questions=[q1, q2, q3, q4];
+
+  function score(){
+    var sc= 0;
+    return function(correct){
+      if(correct){
+        sc++;
+      }
+      return sc;
+    }
+  }
+
+  var keepScore= score();
+
+  //feature next question
+  function nexQuestion(){
   
-  var n= Math.floor(Math.random()* questions.length);
-  console.log(n); 
-  
-  questions[n].displayQuestion();
-  
-  var answer= parseInt(prompt('Please select the correct answer'));
-  
-  questions[n].checkAnwers(answer);
+    var n= Math.floor(Math.random()* questions.length);
+    console.log(n); 
+    
+    questions[n].displayQuestion();
+    
+    var answer=  prompt('Please select the correct answer');
+    
+    
+    if(answer !== 'exit'){
+      questions[n].checkAnwers(parseInt(answer), keepScore);
+      nexQuestion();
+    }
+  }
+
+  nexQuestion();
+
 })();
+*/
